@@ -1,0 +1,2 @@
+^j::
+run, ciscoconnect.bat

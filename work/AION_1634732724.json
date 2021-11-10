@@ -1,0 +1,735 @@
+{
+    "basic": {
+        "modelName": "AION_4",
+        "modelVersion": "1",
+        "dataLocation": "C:\\Temp\\AnalyticsDataExtractor\\Minimum_Bend_Radius_Train.csv",
+        "fileSettings": {
+            "delimiters": "Comma",
+            "textqualifier": "\""
+        },
+        "folderSettings": {
+            "fileType": "NA",
+            "labelDataFile": "NA"
+        },
+        "deployLocation": "C:\\Users\\christine.zuzart\\AppData\\Local\\HCL Technologies\\AION\\1.2.0\\target",
+        "analysisType": {
+            "classification": "True",
+            "regression": "False",
+            "timeSeries": "False",
+            "anomalyDetection": "False",
+            "recommenderSystem": "False",
+            "clustering": "False",
+            "survivalAnalysis": "False",
+            "videoForecasting": "False",
+            "topicModelling": "False",
+            "imageClassification": "False",
+            "objectDetection": "False",
+            "inputDrift": "False",
+            "outputDrift": "False"
+        },
+        "algorithms": {
+            "classification": {
+                "LogisticRegression": "False",
+                "SGDClassifier": "False",
+                "GaussianNB": "False",
+                "DecisionTreeClassifier": "False",
+                "RandomForestClassifier": "False",
+                "SVC": "False",
+                "KNeighborsClassifier": "False",
+                "GradientBoostingClassifier": "True",
+                "SNN": "False",
+                "CNN": "False",
+                "RNN": "False",
+                "NAS": "False",
+                "GoogleModelSearch_DNN": "False"
+            },
+            "regression": {
+                "LinearRegression": "False",
+                "Lasso": "False",
+                "Ridge": "False",
+                "DecisionTreeRegressor": "False",
+                "RandomForestRegressor": "False",
+                "SNN": "False",
+                "CNN": "False",
+                "RNN": "False",
+                "NAS": "False"
+            },
+            "timeSeries": {
+                "ARIMA": "False",
+                "VAR": "False",
+                "FBPROPHET": "False"
+            },
+            "recommenderSystem": {
+                "ItemRating-SVD": "False",
+                "itemRatingConfig": {
+                    "userID": "",
+                    "itemID": "",
+                    "rating": ""
+                },
+                "AssociationRules-Apriori": "False",
+                "TextSimilarity-Siamese": "False",
+                "textSimilarityConfig": {
+                    "baseFeature": "",
+                    "comparisonFeature": ""
+                }
+            },
+            "clustering": {
+                "KMeans": "False",
+                "DBSCAN": "False"
+            },
+            "anomalyDetection": {
+                "IsolationForest": "False",
+                "oneclassSVM": "False",
+                "inlierClassLabel": "False"
+            },
+            "survivalAnalysis": {
+                "KaplanMeierFitter": "False",
+                "COX": "False"
+            },
+            "topicModelling": {
+                "LDA": "False"
+            },
+            "videoForecasting": {
+                "GAN": "False",
+                "SAVP": "False",
+                "VUE": "False"
+            },
+            "imageClassification": {
+                "Densenet": "False",
+                "Inception": "False"
+            },
+            "objectDetection": {
+                "SSD": "False",
+                "CenterNet": "False",
+                "FasterRCNN": "False"
+            },
+            "stateTransition": {
+                "MarkovClustering": "False"
+            }
+        },
+        "scoringCriteria": {
+            "classification": {
+                "Accuracy": "True",
+                "Recall": "False",
+                "Precision": "False",
+                "F1_Score": "False",
+                "ROC_AUC": "False"
+            },
+            "regression": {
+                "MSE": "False",
+                "RMSE": "False",
+                "R2": "False"
+            },
+            "survivalAnalysis": {
+                "ConcordanceIndex": "False"
+            }
+        },
+        "output": {
+            "profilerStage": "True",
+            "selectorStage": "True",
+            "learnerStage": "False",
+            "deploymentStage": "True"
+        },
+        "dateTimeFeature": "",
+        "indexFeature": "",
+        "trainingFeatures": "BendRadius,Thickness,ActualValue",
+        "targetFeature": "Category",
+        "noofforecasts": "158",
+        "inlierLabels": "",
+        "firstDocFeature": "sentence1",
+        "secondDocFeature": "sentence2",
+        "filterExpression": null,
+        "featureList": [
+            "BendRadius",
+            "Thickness",
+            "ActualValue",
+            "Category"
+        ],
+        "filter": "NA",
+        "timegrouper": "NA",
+        "group": "NA"
+    },
+    "advance": {
+        "profiler": {
+            "featureDict": {},
+            "defaultFillMethod": {
+                "numerical": "Median",
+                "categorical": "Mode"
+            },
+            "outlierDetectionStatus": "False",
+            "outlierDetectionMethod": "None",
+            "misValueRatio": "0.8",
+            "categoricalToNumeric": "True",
+            "numericFeatureRatio": "0.7",
+            "bucketing": "False",
+            "num_of_quantiles": "5",
+            "normalizationStatus": "False",
+            "normalizationMethod": "None",
+            "textCleaning": {
+                "removeNoise": "True",
+                "removeNoiseConfig": {
+                    "decodeHTML": "True",
+                    "removeHyperLinks": "True",
+                    "removeMentions": "True",
+                    "removeHashtags": "True",
+                    "removeEmoji": "True",
+                    "unicodeToAscii": "True",
+                    "removeNonAscii": "True"
+                },
+                "expandContractions": "False",
+                "normalize": "True",
+                "normalizeMethod": {
+                    "lemmatization": "True",
+                    "stemming": "False"
+                },
+                "replaceAcronym": "False",
+                "acronymConfig": {
+                    "acronymDict": "None"
+                },
+                "correctSpelling": "False",
+                "removeStopwords": "True",
+                "stopWordsConfig": {
+                    "extend": "False",
+                    "replace": "False",
+                    "stopwordsList": "[]"
+                },
+                "removePunctuation": "True",
+                "removePunctuationConfig": {
+                    "removePuncWithinTokens": "True"
+                },
+                "removeNumericTokens": "True",
+                "removeNumericConfig": {
+                    "removeNumeric_IncludeSpecialCharacters": "True"
+                },
+                "libConfig": {
+                    "tokenizationLib": {
+                        "nltk": "True",
+                        "textblob": "False",
+                        "spacy": "False",
+                        "keras": "False",
+                        "gensim": "False"
+                    },
+                    "lemmatizationLib": {
+                        "nltk": "True",
+                        "textblob": "False",
+                        "spacy": "False"
+                    },
+                    "stopwordsRemovalLib": {
+                        "nltk": "True",
+                        "spacy": "False",
+                        "gensim": "False"
+                    }
+                }
+            },
+            "textFeatureExtraction": {
+                "n_grams": "False",
+                "n_grams_config": {
+                    "min_n": 1,
+                    "max_n": 1,
+                    "range": ""
+                },
+                "pos_tags": "False",
+                "pos_tags_lib": {
+                    "nltk": "True",
+                    "textblob": "False",
+                    "spacy": "False"
+                },
+                "keywordsExtraction": "False",
+                "keywordsExtraction_config": {
+                    "ratio": 0.2,
+                    "words": "None",
+                    "scores": "False",
+                    "pos_filter": "NN,JJ",
+                    "lemmatize": "False"
+                },
+                "shallowParsing": "False",
+                "shallowParsing_lib": {
+                    "spacy": "True",
+                    "textblob": "False",
+                    "nltk": "False"
+                },
+                "namedEntityRecognition": "False"
+            },
+            "textConversionMethod": {
+                "TF_IDF": "True",
+                "countVectors": "False",
+                "wordEmbedding": "False",
+                "wordEmbeddingMethod": {
+                    "word2vec": "False",
+                    "fastText": "False",
+                    "glove": "False"
+                }
+            }
+        },
+        "selector": {
+            "featureReductionStatus": "False",
+            "featureReductionMethod": "NA",
+            "nfeaturesToReduce": 4,
+            "categoricalFeatureRatio": "0.01",
+            "correlationThreshold": "0.85",
+            "pValueThreshold": "0.05",
+            "varianceThreshold": "0.01",
+            "modelSelector": "enabled"
+        },
+        "inputdriftconf": {
+            "features": "a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19",
+            "historicaldatalocation": "C:\\Project\\Analytics\\eion\\aion\\Data\\segmenttraindata.csv"
+        },
+        "trainPercentage": 80,
+        "categoryBalancingMethod": "oversample",
+        "mllearner_config": {
+            "modelParams": {
+                "classifierModelParams": {
+                    "LogisticRegression": {
+                        "C": "0.001,100,20",
+                        "penalty": "l1,l2",
+                        "class_weight": "balanced"
+                    },
+                    "SGDClassifier": {
+                        "loss": "log",
+                        "penalty": "l1",
+                        "fit_intercept": "True",
+                        "class_weight": "balanced"
+                    },
+                    "GaussianNB": {
+                        "var_smoothing": "1e-09,1e-04,20"
+                    },
+                    "SVC": {
+                        "kernel": "linear",
+                        "C": "1e-09,1e-04",
+                        "probability": "True"
+                    },
+                    "KNeighborsClassifier": {
+                        "weights": "uniform,distance",
+                        "n_neighbors": "2,16,2"
+                    },
+                    "DecisionTreeClassifier": {
+                        "max_depth": "2,32,2",
+                        "min_samples_split": "0.1,1.0,10",
+                        "min_samples_leaf": "0.1,0.5,10"
+                    },
+                    "RandomForestClassifier": {
+                        "max_depth": "2,32,2",
+                        "min_samples_split": "0.1,1.0,10",
+                        "min_samples_leaf": "0.1,0.5,10"
+                    },
+                    "GradientBoostingClassifier": {
+                        "max_depth": "2,32,2",
+                        "min_samples_split": "0.1,1.0,10",
+                        "min_samples_leaf": "0.1,0.5,10",
+                        "n_estimators": "1,200,20"
+                    }
+                },
+                "regressorModelParams": {
+                    "LinearRegression": {
+                        "fit_intercept": "True,False",
+                        "normalize": "True,False",
+                        "copy_X": "True, False"
+                    },
+                    "Lasso": {
+                        "alpha": "1e-15,10,20"
+                    },
+                    "Ridge": {
+                        "alpha": "1e-15,10,20"
+                    },
+                    "DecisionTreeRegressor": {
+                        "max_depth": "2,32,2",
+                        "min_samples_split": "0.1,1.0,10",
+                        "min_samples_leaf": "0.1,0.5,10"
+                    },
+                    "RandomForestRegressor": {
+                        "max_depth": "2,32,2",
+                        "min_samples_split": "0.1,1.0,10",
+                        "min_samples_leaf": "0.1,0.5,10"
+                    }
+                },
+                "clusteringModelParams": {
+                    "KMeans": {
+                        "n_clusters": 0
+                    },
+                    "DBSCAN": {
+                        "eps": 3,
+                        "min_samples": 2
+                    }
+                },
+                "topicModellingParams": {
+                    "LDA": {
+                        "n_topics": 6,
+                        "n_words_per_topic": 10
+                    }
+                }
+            },
+            "modelparamsfile": null,
+            "optimizationMethod": "random",
+            "optimizationHyperParameter": {
+                "iterations": "100",
+                "trainTestCVSplit": "5"
+            },
+            "thresholdTunning": "NA",
+            "ensemble": "disable",
+            "ensemble_method": "na",
+            "ensembleparam": {
+                "ensemble_params": {
+                    "max_features_percentage": 0.5,
+                    "max_samples": 0.4,
+                    "seed": 10,
+                    "final_estimator_stack_c": "LogisticRegression",
+                    "final_estimator_stack_r": "RidgeCV"
+                }
+            }
+        },
+        "objectDetection": {
+            "n_epoch": 14,
+            "batch_size": 4,
+            "pretrainedModel": "efficientdet_d1_coco17_tpu-32"
+        },
+        "timeseries": {
+            "modelParams": {
+                "ARIMA": {
+                    "start_p": 1,
+                    "start_q": 1,
+                    "max_p": 2,
+                    "max_q": 2,
+                    "max_d": 2,
+                    "m": 12,
+                    "start_P": 0,
+                    "start_Q": 0,
+                    "max_P": 2,
+                    "max_D": 2,
+                    "max_Q": 2,
+                    "max_order": 1,
+                    "seasonal": "True",
+                    "d": 1,
+                    "D": 1,
+                    "trace": "True",
+                    "error_action": "ignore",
+                    "suppress_warnings": "True",
+                    "stepwise": "True"
+                },
+                "FBPROPHET": {
+                    "seasonality_mode": "multiplicative,additive",
+                    "changepoint_prior_scale": "0.05",
+                    "changepoint_range": "0.1",
+                    "yearly_seasonality": "True",
+                    "weekly_seasonality": "auto",
+                    "daily_seasonality": "auto",
+                    "mcmc_samples": "0",
+                    "interval_width": "0.25",
+                    "holidays_prior_scale": "1",
+                    "n_changepoints": "10",
+                    "uncertainty_samples": "0",
+                    "seasonality_prior_scale": "10",
+                    "additional_regressors": "",
+                    "holiday_country_name": "US",
+                    "holiday_years": "2018,2019,2020",
+                    "no_of_periods": "100",
+                    "pred_frequncy": ""
+                }
+            },
+            "modelparamsfile": ""
+        },
+        "associationrule": {
+            "modelParams": {
+                "apriori": {
+                    "minSupport": 0.2,
+                    "metric": "lift",
+                    "minThreshold": 0.4
+                }
+            },
+            "modelparamsfile": ""
+        },
+        "dllearner_config": {
+            "modelParams": {
+                "classifierModelParams": {
+                    "SNN": {
+                        "lr": "0.5, 5, 10",
+                        "activation": "relu,elu",
+                        "optimizer": "Adam,Nadam,SGD",
+                        "losses": "categorical_crossentropy,binary_crossentropy",
+                        "first_neuron": "4, 8, 16, 32, 64",
+                        "shapes": "brick",
+                        "hidden_layers": "0, 1, 2",
+                        "dropout": "0, 0.5, 0.9",
+                        "batch_size": "16,32,64,128",
+                        "epochs": "150",
+                        "last_activation": "sigmoid"
+                    },
+                    "RNN": {
+                        "RNNType": "SimpleRNN",
+                        "numRNNLayers": "0",
+                        "activation": "softmax",
+                        "optimizer": "Nadam,Adam",
+                        "losses": "categorical_crossentropy",
+                        "first_neuron": "16,32,64",
+                        "shapes": "brick",
+                        "hidden_layers": "1,2,3",
+                        "dropout": "0.2,0.4",
+                        "batch_size": "16,32,64,128",
+                        "epochs": "50,100",
+                        "last_activation": "sigmoid"
+                    },
+                    "CNN": {
+                        "activation": "softmax",
+                        "numConvLayers": "2",
+                        "MaxPool": "False",
+                        "optimizer": "Nadam,Adam",
+                        "losses": "categorical_crossentropy",
+                        "first_neuron": "16,32,64",
+                        "shapes": "brick",
+                        "hidden_layers": "1,2,3",
+                        "dropout": "0.2,0.4",
+                        "batch_size": "16,32,64,128",
+                        "epochs": "50,100",
+                        "last_activation": "sigmoid"
+                    },
+                    "NAS": {
+                        "n_models": 1,
+                        "n_epochs": 1,
+                        "optimizer": "adam",
+                        "metrics": "",
+                        "tuner": "",
+                        "seed": 1
+                    },
+                    "GoogleModelSearch_DNN": {
+                        "n_models": 5,
+                        "train_steps": 10,
+                        "n_eval": 10,
+                        "batch_size": 32,
+                        "logits_dimension": 2,
+                        "root_dir_name": "modelsearch_rootdir",
+                        "experiment_name": "test"
+                    }
+                },
+                "regressorModelParams": {
+                    "SNN": {
+                        "activation": "relu,elu",
+                        "optimizer": "Nadam,Adam",
+                        "losses": "mean_absolute_error,mean_squared_error",
+                        "first_neuron": "16,32,64",
+                        "shapes": "brick,triangle,funnel",
+                        "hidden_layers": "1,2",
+                        "dropout": "0.2,0.4",
+                        "batch_size": "2,10",
+                        "epochs": "10,20,30"
+                    },
+                    "RNN": {
+                        "RNNType": "GRU,LSTM",
+                        "numRNNLayers": "0",
+                        "activation": "relu,elu",
+                        "optimizer": "Nadam,Adam",
+                        "losses": "mean_absolute_error,mean_squared_error",
+                        "first_neuron": "16,32,64",
+                        "shapes": "brick",
+                        "hidden_layers": "1,2,3",
+                        "dropout": "0.2,0.4",
+                        "batch_size": "2,10",
+                        "epochs": "10,20,30"
+                    },
+                    "CNN": {
+                        "kernel_size": "1",
+                        "activation": "relu,elu",
+                        "numConvLayers": "0",
+                        "MaxPool": "True",
+                        "optimizer": "Nadam,Adam",
+                        "losses": "mean_absolute_error,mean_squared_error",
+                        "first_neuron": "16,32,64",
+                        "shapes": "brick,triangle,funnel",
+                        "hidden_layers": "1,2,3",
+                        "dropout": "0.2,0.4",
+                        "batch_size": "2,10",
+                        "epochs": "10,20,30"
+                    },
+                    "NAS": {
+                        "n_models": 1,
+                        "n_epochs": 1,
+                        "optimizer": "adam",
+                        "metrics": "",
+                        "tuner": "",
+                        "seed": 1
+                    }
+                }
+            },
+            "modelparamsfile": "",
+            "optimizationMethod": "Quantum",
+            "optimizationHyperParameter": {
+                "roundLimit": 10,
+                "trainTestCVSplit": 10
+            }
+        },
+        "ImageAugmentation": {
+            "Enable": "False",
+            "KeepAugmentedImages": "True",
+            "Noise": {
+                "Blur": "True",
+                "Brightness": "True",
+                "Contrast": "True"
+            },
+            "Transformation": {
+                "Flip": "True",
+                "Rotate": "True",
+                "Shift": "True",
+                "Crop": "True"
+            }
+        },
+        "video_config": {
+            "modelParams": {
+                "gan": {
+                    "batch_size": 16,
+                    "lr": 0.0002,
+                    "beta1": 0.5,
+                    "beta2": 0.999,
+                    "l1_weight": 100,
+                    "l2_weight": 0,
+                    "kl_weight": 0,
+                    "video_sn_vae_gan_weight": 0,
+                    "video_sn_gan_weight": 0.1,
+                    "vae_gan_feature_cdist_weight": 0,
+                    "gan_feature_cdist_weight": 10,
+                    "state_weight": 0,
+                    "nz": 32
+                },
+                "savp": {
+                    "batch_size": 16,
+                    "lr": 0.0002,
+                    "beta1": 0.5,
+                    "beta2": 0.999,
+                    "l1_weight": 100,
+                    "l2_weight": 0,
+                    "kl_weight": 0.01,
+                    "video_sn_vae_gan_weight": 0.1,
+                    "video_sn_gan_weight": 0.1,
+                    "vae_gan_feature_cdist_weight": 10,
+                    "gan_feature_cdist_weight": 0,
+                    "state_weight": 0,
+                    "nz": 32
+                },
+                "vae": {
+                    "batch_size": 32,
+                    "lr": 0.001,
+                    "beta1": 0.9,
+                    "beta2": 0.999,
+                    "l1_weight": 1,
+                    "l2_weight": 0,
+                    "kl_weight": 0.00001,
+                    "video_sn_vae_gan_weight": 0,
+                    "video_sn_gan_weight": 0,
+                    "state_weight": 0,
+                    "nz": 32
+                }
+            },
+            "hyperParameters": {
+                "accum_eval_summary_freq": 100000,
+                "aggregate_nccl": 0,
+                "checkpoint": 0,
+                "dataset": "kth",
+                "dataset_hparams": 0,
+                "dataset_hparams_dict": 0,
+                "eval_summary_freq": 25000,
+                "gpu_mem_frac": 0,
+                "image_summary_freq": 5000,
+                "logs_dir": "",
+                "model": "savp",
+                "model_hparams": 0,
+                "output_dir_postfix": "",
+                "progress_freq": 100,
+                "resume": 0,
+                "save_freq": 5000,
+                "seed": 0,
+                "summary_freq": 1000,
+                "val_input_dir": 0
+            },
+            "forecasting": {
+                "results_gif_dir": 0,
+                "results_png_dir": 0,
+                "output_gif_dir": 0,
+                "output_png_dir": 0,
+                "mode": "test",
+                "dataset": "kth",
+                "dataset_hparams": "sequence_length=30",
+                "model": "savp",
+                "model_hparams": 0,
+                "batch_size": 1,
+                "num_samples": 0,
+                "num_epochs": 1,
+                "num_stochastic_samples": 5,
+                "gif_length": 0,
+                "fps": 4,
+                "gpu_mem_frac": 0,
+                "seed": 7
+            }
+        },
+        "textSimilarityConfig": {
+            "num_epochs": 5,
+            "activation": "relu",
+            "batch_size": 64,
+            "trainPercentage": 80,
+            "similarityIndex": 0.4
+        },
+        "image_config": {
+            "img_width": 128,
+            "img_height": 128,
+            "img_channel": 3,
+            "lr": 0.001,
+            "epochs": 10,
+            "test_split_ratio": 0.2
+        },
+        "recommenderparam": {
+            "svd_params": {
+                "n_factors": "100",
+                "n_epochs": "1",
+                "biased": "True",
+                "init_mean": "0",
+                "init_std_dev": "0.5,0.1",
+                "lr_all": "0.005,0.01",
+                "reg_all": "0.02,0.1",
+                "lr_bu": "0.005",
+                "lr_bi": "0.005",
+                "lr_pu": "0,0.01",
+                "lr_qi": "0",
+                "reg_bu": "0",
+                "reg_bi": "0",
+                "reg_pu": "0",
+                "reg_qi": "0",
+                "random_state": 0,
+                "verbose": "True"
+            }
+        },
+        "visualization_settings": {
+            "visulization_tool": "kibana",
+            "datasetid": "c008dc50-6432-11ea-90da-a99d0a73393a"
+        },
+        "outputdriftconf": {
+            "actualFeature": "actual",
+            "predictedFeature": "predict",
+            "predictionType": "Regression"
+        },
+        "remoteTraining": {
+            "Enable": "False",
+            "server": {
+                "serverName": "ec2",
+                "awsAccessKeyId": "",
+                "awsSecretAccessKey": "",
+                "regionName": "ap-south-1",
+                "amiId": "ami-0ffc16774d784da6d",
+                "InstanceIds": []
+            },
+            "ssh": {
+                "userName": "ubuntu",
+                "keyFilePath": "C:\\AION\\AION_GPU.pem"
+            }
+        },
+        "deployer": {
+            "method": "test_package",
+            "prediction_type": "class",
+            "docker_username": "ashwani1230",
+            "docker_password": "ashwani@1230",
+            "docker_image_name": "germancredit",
+            "docker_image_tagging": "0.1",
+            "image_uplaod": "False",
+            "edge_deployment": "False",
+            "edge_format": {
+                "onnx": "True"
+            }
+        }
+    }
+}
